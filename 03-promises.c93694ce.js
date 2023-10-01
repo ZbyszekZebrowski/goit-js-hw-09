@@ -1,0 +1,3 @@
+const e=document.querySelector(".form");e.addEventListener("submit",function(e){e.preventDefault();let t=new FormData(e.target),o=Number(t.get("delay")),n=Number(t.get("step")),i=Number(t.get("amount"));for(let e=0;e<i;e++){let t=o+e*n;(function(e,t){let o=Math.random()>.3;return new Promise((n,i)=>{setTimeout(()=>{o?n({position:e,delay:t}):i({position:e,delay:t})},t)})})(e+1,t).then(({position:e,delay:t})=>{console.log(`✅ Fulfilled promise ${e} in ${t}ms`)}).catch(({position:e,delay:t})=>{console.log(`❌ Rejected promise ${e} in ${t}ms`)})}});//# sourceMappingURL=03-promises.c93694ce.js.map
+
+//# sourceMappingURL=03-promises.c93694ce.js.map
